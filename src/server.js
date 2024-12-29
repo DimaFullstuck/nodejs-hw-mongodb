@@ -5,7 +5,7 @@ import express from 'express';
 import { env } from './utils/env.js';
 import contactsRouter from './routers/contacts.js';
 
-const PORT = Number(env('PORT', '3000'));
+const PORT = process(env('PORT', '3000'));
 
 export const setupServer = () => {
   const app = express();
